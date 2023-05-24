@@ -11,4 +11,6 @@ app.get("/users", getUser);
 app.post("/users", create);
 app.post("/login", login);
 
+
+app.use("/*", (_, res) => res.json("Not Found").status(404))
 app.listen(9000, () => console.log(9000));
