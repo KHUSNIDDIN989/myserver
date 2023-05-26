@@ -7,5 +7,7 @@ app.use(cors("*"));
 app.use(express.json());
 app.use("/", router);
 
-app.use("/*", (_, res) => res.json("Not Found").status(404));
+app.get('/get', (req, res) => { res.json("Hech narsa topilmadi!")})
+
+app.use("/*", (_, res) => res.json("Not Found 404").status(404));
 app.listen(9000, () => console.log(9000));
